@@ -19,3 +19,7 @@ struct LlamadasURL {
     let BASE_URL = "https://itunes.apple.com/%@/rss/%@/limit=%@/json"
     
 }
+
+func randomCountry(){
+    
+}
