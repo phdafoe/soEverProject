@@ -1,12 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let rSSModel = try? newJSONDecoder().decode(RSSModel.self, from: jsonData)
+//   let genericModel = try? newJSONDecoder().decode(GenericModel.self, from: jsonData)
 
 import Foundation
 
-// MARK: - RSSModel
-struct BooksModel: Codable {
+// MARK: - GenericModel
+struct GenericModel: Codable {
     let feed: Feed
     
     enum CodingKeys: String, CodingKey {
@@ -16,13 +16,37 @@ struct BooksModel: Codable {
 
 // MARK: - Feed
 struct Feed: Codable {
+    let author: Author
     let entry: [Entry]
+    let updated: Rights
+    let rights: Rights
+    let title: Rights
+    let icon: Icon
+    let link: [LinkElement]
+    let id: FeedID
     
     enum CodingKeys: String, CodingKey {
+        case author = "author"
         case entry = "entry"
+        case updated = "updated"
+        case rights = "rights"
+        case title = "title"
+        case icon = "icon"
+        case link = "link"
+        case id = "id"
     }
 }
 
+// MARK: - Author
+struct Author: Codable {
+    let name: Rights
+    let uri: URI
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case uri = "uri"
+    }
+}
 
 // MARK: - Rights
 struct Rights: Codable {
@@ -47,14 +71,14 @@ struct Entry: Codable {
     let imName: IMName
     let imImage: [IMImage]
     let summary: Rights
-    let imVendorName: Rights
+    //let imVendorName: Rights
     let imPrice: IMPrice
     let imContentType: IMContentType
     let title: IMName
-    let imPublisher: Rights
-    let link: EntryLink
+    //let imPublisher: Rights
+    //let link: EntryLink
     let id: EntryID
-    let imArtist: IMArtist
+    //let imArtist: IMArtist
     let category: Category
     let imReleaseDate: IMReleaseDate
     let subtitle: Rights?
@@ -63,14 +87,14 @@ struct Entry: Codable {
         case imName = "im:name"
         case imImage = "im:image"
         case summary = "summary"
-        case imVendorName = "im:vendorName"
+        //case imVendorName = "im:vendorName"
         case imPrice = "im:price"
         case imContentType = "im:contentType"
         case title = "title"
-        case imPublisher = "im:publisher"
-        case link = "link"
+        //case imPublisher = "im:publisher"
+        //case link = "link"
         case id = "id"
-        case imArtist = "im:artist"
+        //case imArtist = "im:artist"
         case category = "category"
         case imReleaseDate = "im:releaseDate"
         case subtitle = "subtitle"

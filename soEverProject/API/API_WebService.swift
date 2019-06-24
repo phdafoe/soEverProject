@@ -13,7 +13,11 @@ import Foundation
 class WebServiceProvider {
     
     
-    func getBooksFromWebItunes<T : Decodable>(_ type : T.Type, country: String, typeShow : String, numberData : String, completionHandler : @escaping (T?) -> ()) {
+    func getModelDataFromWebItunes<T : Decodable>(_ type : T.Type,
+                                                  country: String,
+                                                  typeShow : String,
+                                                  numberData : String,
+                                                  completionHandler : @escaping (T?) -> ()) {
        
         let url = CONSTANTES.LLAMADAS.BASE_URL
         let arguments : [CVarArg] = [country, typeShow, numberData]
@@ -31,8 +35,19 @@ class WebServiceProvider {
                         print("AQUI ANDRES \(error)")
                         completionHandler(nil)
                     }
-                }catch let error{
-                    print(error.localizedDescription)
+                }catch let DecodingError.dataCorrupted(context) {
+                    print(context)
+                } catch let DecodingError.keyNotFound(key, context) {
+                    print("Key '\(key)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.valueNotFound(value, context) {
+                    print("Value '\(value)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.typeMismatch(type, context)  {
+                    print("Type '\(type)' mismatch:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch {
+                    print("error: ", error)
                 }
             }
         }

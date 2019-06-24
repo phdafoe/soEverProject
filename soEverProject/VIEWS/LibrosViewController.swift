@@ -38,24 +38,24 @@ class LibrosViewController: UIViewController {
     //MARK: - Metodos privados
     internal func toDoCall(){
         APESuperHUD.show(style: .loadingIndicator(type: .standard), title: nil, message: "Loading...")
-        WebServiceProvider().getBooksFromWebItunes(BooksModel.self,
-                                                   country: "es",
-                                                   typeShow: "toppaidebooks",
-                                                   numberData: "10") { (resultBooks) in
-                                                    guard let resultBooksDes = resultBooks else { return }
-                                                    self.arrayBooks = resultBooksDes.feed.entry
-                                                    DispatchQueue.main.async {
-                                                        self.myTableCustomView.reloadData()
-                                                        APESuperHUD.dismissAll(animated: true)
-                                                    }
+        WebServiceProvider().getModelDataFromWebItunes(GenericModel.self,
+                                                       country: "es",
+                                                       typeShow: "toppaidebooks",
+                                                       numberData: "10") { (resultBooks) in
+                                                        guard let resultBooksDes = resultBooks else { return }
+                                                        self.arrayBooks = resultBooksDes.feed.entry
+                                                        DispatchQueue.main.async {
+                                                            self.myTableCustomView.reloadData()
+                                                            APESuperHUD.dismissAll(animated: true)
+                                                        }
         }
     }
     
-    //MARK: - Delegados
+    
 
 }
 
-//MARK: - DELEGADO /
+//MARK: - DELEGADO / DATA SOURCE
 extension LibrosViewController : UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
