@@ -13,18 +13,19 @@ import Foundation
 class WebServiceProvider {
     
     
-    func getBooksFromWebItunes(_ country: String, typeShow : String, numberData : String, completionHandler : @escaping (BooksModel?) -> ()) {
+    func getBooksFromWebItunes<T : Decodable>(_ type : T.Type, country: String, typeShow : String, numberData : String, completionHandler : @escaping (T?) -> ()) {
        
         let url = CONSTANTES.LLAMADAS.BASE_URL
         let arguments : [CVarArg] = [country, typeShow, numberData]
         let urlString = String(format: url, arguments: arguments)
+        
         if let urlStringDes = URL(string: urlString){
             Alamofire.request(URLRequest(url: urlStringDes)).validate().responseData { (data) in
                 guard let dataDes = data.data else { return }
                 do{
                     switch data.result{
                     case .success:
-                        let json = try JSONDecoder().decode(BooksModel.self, from: dataDes)
+                        let json = try JSONDecoder().decode(T.self, from: dataDes)
                         completionHandler(json)
                     case .failure(let error):
                         print("AQUI ANDRES \(error)")
@@ -35,11 +36,6 @@ class WebServiceProvider {
                 }
             }
         }
-        
-        
-        
-        
-        
     }
     
 }

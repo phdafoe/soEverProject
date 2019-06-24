@@ -37,18 +37,17 @@ class LibrosViewController: UIViewController {
     
     //MARK: - Metodos privados
     internal func toDoCall(){
-        //APESuperHUD.load()
-        
-        WebServiceProvider().getBooksFromWebItunes("es",
+        APESuperHUD.show(style: .loadingIndicator(type: .standard), title: nil, message: "Loading...")
+        WebServiceProvider().getBooksFromWebItunes(BooksModel.self,
+                                                   country: "es",
                                                    typeShow: "toppaidebooks",
                                                    numberData: "10") { (resultBooks) in
                                                     guard let resultBooksDes = resultBooks else { return }
                                                     self.arrayBooks = resultBooksDes.feed.entry
                                                     DispatchQueue.main.async {
                                                         self.myTableCustomView.reloadData()
-                                                        //APESuperHUD.dismiss(self)
+                                                        APESuperHUD.dismissAll(animated: true)
                                                     }
-                                                   
         }
     }
     

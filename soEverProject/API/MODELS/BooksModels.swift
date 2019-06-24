@@ -16,37 +16,13 @@ struct BooksModel: Codable {
 
 // MARK: - Feed
 struct Feed: Codable {
-    let author: Author
     let entry: [Entry]
-    let updated: Rights
-    let rights: Rights
-    let title: Rights
-    let icon: Icon
-    let link: [LinkElement]
-    let id: FeedID
     
     enum CodingKeys: String, CodingKey {
-        case author = "author"
         case entry = "entry"
-        case updated = "updated"
-        case rights = "rights"
-        case title = "title"
-        case icon = "icon"
-        case link = "link"
-        case id = "id"
     }
 }
 
-// MARK: - Author
-struct Author: Codable {
-    let name: Rights
-    let uri: URI
-    
-    enum CodingKeys: String, CodingKey {
-        case name = "name"
-        case uri = "uri"
-    }
-}
 
 // MARK: - Rights
 struct Rights: Codable {
