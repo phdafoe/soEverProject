@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UTz-aT-8kQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pelicuas-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PeliculasViewController" customModule="soEverProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="wcz-fh-Vvo"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Pelicuas" id="INW-4E-9YL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1151" y="-582"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sWc-84-2uB">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UTz-aT-8kQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nnn-vi-qIK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ne2-yW-Qnd" kind="relationship" relationship="viewControllers" id="g3f-LV-Qef"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="iEi-TZ-RKW"/>
+                        <segue destination="zJT-FX-fCN" kind="relationship" relationship="viewControllers" id="tXH-3U-UiV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxZ-z2-Uos" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Libros-->
+        <scene sceneID="5zM-e6-8en">
+            <objects>
+                <viewController id="ne2-yW-Qnd" customClass="LibrosViewController" customModule="soEverProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="erG-JA-4HX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RTn-u8-vMc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I3d-wd-Ygn" firstAttribute="trailing" secondItem="RTn-u8-vMc" secondAttribute="trailing" id="WoI-ks-bwc"/>
+                            <constraint firstItem="RTn-u8-vMc" firstAttribute="leading" secondItem="I3d-wd-Ygn" secondAttribute="leading" id="XUM-it-Qwt"/>
+                            <constraint firstItem="I3d-wd-Ygn" firstAttribute="bottom" secondItem="RTn-u8-vMc" secondAttribute="bottom" id="dfI-kO-x9C"/>
+                            <constraint firstItem="RTn-u8-vMc" firstAttribute="top" secondItem="I3d-wd-Ygn" secondAttribute="top" id="gyc-JO-3pX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I3d-wd-Ygn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Libros" id="UPI-K2-Zrg"/>
+                    <connections>
+                        <outlet property="myTableCustomView" destination="RTn-u8-vMc" id="qYH-5E-Vyg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0AZ-8i-h4V" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="123"/>
+        </scene>
+        <!--Apps-->
+        <scene sceneID="GH0-bc-eAf">
+            <objects>
+                <viewController id="zJT-FX-fCN" customClass="AplicacionesViewController" customModule="soEverProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2lL-89-A8A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="yf5-9z-ovx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Apps" id="TlO-Rz-bws"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OVJ-kh-Uhn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="850"/>
         </scene>
     </scenes>
 </document>
