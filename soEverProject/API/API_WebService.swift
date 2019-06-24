@@ -35,7 +35,7 @@ class WebServiceProvider {
                         print("AQUI ANDRES \(error)")
                         completionHandler(nil)
                     }
-                }catch let DecodingError.dataCorrupted(context) {
+                } catch let DecodingError.dataCorrupted(context) {
                     print(context)
                 } catch let DecodingError.keyNotFound(key, context) {
                     print("Key '\(key)' not found:", context.debugDescription)

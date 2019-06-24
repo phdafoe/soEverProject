@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import APESuperHUD
+//import APESuperHUD
 
 class LibrosViewController: UIViewController {
     
@@ -17,17 +17,12 @@ class LibrosViewController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet weak var myTableCustomView: UITableView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableCustomView.delegate = self
         myTableCustomView.dataSource = self
         myTableCustomView.register(UINib(nibName: "GenericCell", bundle: nil), forCellReuseIdentifier: "GenericCellIdentifier")
-        
         toDoCall()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,20 +31,15 @@ class LibrosViewController: UIViewController {
     }
     
     //MARK: - Metodos privados
-    internal func toDoCall(){
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), title: nil, message: "Loading...")
-        WebServiceProvider().getModelDataFromWebItunes(GenericModel.self,
-                                                       country: "es",
-                                                       typeShow: "toppaidebooks",
-                                                       numberData: "10") { (resultBooks) in
-                                                        guard let resultBooksDes = resultBooks else { return }
-                                                        self.arrayBooks = resultBooksDes.feed.entry
-                                                        DispatchQueue.main.async {
-                                                            self.myTableCustomView.reloadData()
-                                                            APESuperHUD.dismissAll(animated: true)
-                                                        }
+    private func toDoCall(){
+        GenericPresenter().getDataFromProvider("es", typeShow: "toppaidebooks", numberData: "10") { (resultEntry) in
+            guard let resultEntryDes = resultEntry else {return}
+            self.arrayBooks = resultEntryDes
+            self.myTableCustomView.reloadData()
         }
     }
+    
+    
     
     
 

@@ -35,17 +35,10 @@ class PeliculasViewController: UIViewController {
     
     //MARK: - Metodos privados
     internal func toDoCall(){
-        APESuperHUD.show(style: .loadingIndicator(type: .standard), title: nil, message: "Loading...")
-        WebServiceProvider().getModelDataFromWebItunes(GenericModel.self,
-                                                       country: "es",
-                                                       typeShow: "topmovies",
-                                                       numberData: "10") { (resultBooks) in
-                                                        guard let resultBooksDes = resultBooks else { return }
-                                                        self.arrayPeliculas = resultBooksDes.feed.entry
-                                                        DispatchQueue.main.async {
-                                                            self.myTableCustomView.reloadData()
-                                                            APESuperHUD.dismissAll(animated: true)
-                                                        }
+        GenericPresenter().getDataFromProvider("es", typeShow: "topmovies", numberData: "10") { (resultEntry) in
+            guard let resultEntryDes = resultEntry else {return}
+            self.arrayPeliculas = resultEntryDes
+            self.myTableCustomView.reloadData()
         }
     }
     
