@@ -18,10 +18,14 @@ class LibrosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Libros Store"
         myTableCustomView.delegate = self
         myTableCustomView.dataSource = self
         myTableCustomView.register(UINib(nibName: "GenericCell", bundle: nil), forCellReuseIdentifier: "GenericCellIdentifier")
         toDoCall()
+        
+        self.navigationItem.backBarButtonItem?.title = " "
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +42,8 @@ class LibrosViewController: UIViewController {
         }
     }
     
+    
+   
     
     
     
@@ -63,7 +69,10 @@ extension LibrosViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetalleGenericTableViewController") as! DetalleGenericTableViewController
+        let model = arrayBooks[indexPath.row]
+        vc.modelData = model
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

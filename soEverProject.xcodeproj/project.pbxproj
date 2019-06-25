@@ -22,6 +22,7 @@
 		B44029A822C0F77600B3F6FB /* GenericCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44029A622C0F77600B3F6FB /* GenericCell.xib */; };
 		B48F655822C151D900CAB685 /* GenericPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655722C151D900CAB685 /* GenericPresenter.swift */; };
 		B48F655A22C160B200CAB685 /* AppsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655922C160B200CAB685 /* AppsModel.swift */; };
+		B48F655C22C20CB000CAB685 /* DetalleGenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655B22C20CB000CAB685 /* DetalleGenericTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		B44029A622C0F77600B3F6FB /* GenericCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericCell.xib; sourceTree = "<group>"; };
 		B48F655722C151D900CAB685 /* GenericPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericPresenter.swift; sourceTree = "<group>"; };
 		B48F655922C160B200CAB685 /* AppsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsModel.swift; sourceTree = "<group>"; };
+		B48F655B22C20CB000CAB685 /* DetalleGenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleGenericTableViewController.swift; sourceTree = "<group>"; };
 		EC82AE3D13B9E75B8C0E78E8 /* Pods-soEverProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soEverProject.release.xcconfig"; path = "Target Support Files/Pods-soEverProject/Pods-soEverProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 				B440298722C0AFE300B3F6FB /* PeliculasViewController.swift */,
 				B44029A022C0DDA800B3F6FB /* LibrosViewController.swift */,
 				B44029A222C0DDC400B3F6FB /* AplicacionesViewController.swift */,
+				B48F655B22C20CB000CAB685 /* DetalleGenericTableViewController.swift */,
 			);
 			path = VIEWS;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				B440298822C0AFE300B3F6FB /* PeliculasViewController.swift in Sources */,
 				B44029A122C0DDA800B3F6FB /* LibrosViewController.swift in Sources */,
 				B440298622C0AFE300B3F6FB /* AppDelegate.swift in Sources */,
+				B48F655C22C20CB000CAB685 /* DetalleGenericTableViewController.swift in Sources */,
 				B48F655A22C160B200CAB685 /* AppsModel.swift in Sources */,
 				B440299C22C0BB7A00B3F6FB /* GenericModels.swift in Sources */,
 				B48F655822C151D900CAB685 /* GenericPresenter.swift in Sources */,

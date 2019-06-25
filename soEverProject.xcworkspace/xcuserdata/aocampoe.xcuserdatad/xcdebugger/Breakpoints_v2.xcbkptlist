@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "soEverProject/VIEWS/AplicacionesViewController.swift"
-            timestampString = "583139042.139487"
+            timestampString = "583149418.02263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -58,7 +58,7 @@
                   moduleName = "soEverProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/AplicacionesViewController.swift"
-                  timestampString = "583099821.1872441"
+                  timestampString = "583146426.46005"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "37"
@@ -73,7 +73,7 @@
                   moduleName = "soEverProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/AplicacionesViewController.swift"
-                  timestampString = "583099821.1897891"
+                  timestampString = "583146426.462218"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
@@ -89,13 +89,106 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "soEverProject/API/API_WebService.swift"
-            timestampString = "583139042.139568"
+            filePath = "soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+            timestampString = "583149418.0226949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "getModelDataFromWebItunes(_:country:typeShow:numberData:completionHandler:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "DetalleGenericTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.modelData.getter : Swift.Optional&lt;soEverProject.Entry&gt;"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.468119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "1142">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.modelData.setter : Swift.Optional&lt;soEverProject.Entry&gt;"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.46998"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "1262">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.init(style: __C.UITableViewStyle) -&gt; soEverProject.DetalleGenericTableViewController"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.47188"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; soEverProject.DetalleGenericTableViewController"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.473712"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;soEverProject.DetalleGenericTableViewController&gt;"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.475515"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+            timestampString = "583149418.022752"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,14 +198,121 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "soEverProject/API/API_WebService.swift"
-            timestampString = "583139042.139618"
+            filePath = "soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+            timestampString = "583149418.0228029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "getModelDataFromWebItunes(_:country:typeShow:numberData:completionHandler:)"
-            landmarkType = "7">
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.__allocating_init(style: __C.UITableViewStyle) -&gt; soEverProject.DetalleGenericTableViewController"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.4881099"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.init(style: __C.UITableViewStyle) -&gt; soEverProject.DetalleGenericTableViewController"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.489972"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; soEverProject.DetalleGenericTableViewController"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.491762"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; soEverProject.DetalleGenericTableViewController"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.493572"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;soEverProject.DetalleGenericTableViewController&gt;"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.495891"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;soEverProject.DetalleGenericTableViewController&gt;"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.497703"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "50">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.__deallocating_deinit"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583146426.499482"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
