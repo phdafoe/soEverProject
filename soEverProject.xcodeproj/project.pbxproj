@@ -23,6 +23,7 @@
 		B48F655822C151D900CAB685 /* GenericPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655722C151D900CAB685 /* GenericPresenter.swift */; };
 		B48F655A22C160B200CAB685 /* AppsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655922C160B200CAB685 /* AppsModel.swift */; };
 		B48F655C22C20CB000CAB685 /* DetalleGenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655B22C20CB000CAB685 /* DetalleGenericTableViewController.swift */; };
+		B48F655E22C229DC00CAB685 /* WebSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655D22C229DC00CAB685 /* WebSiteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		B48F655722C151D900CAB685 /* GenericPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericPresenter.swift; sourceTree = "<group>"; };
 		B48F655922C160B200CAB685 /* AppsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsModel.swift; sourceTree = "<group>"; };
 		B48F655B22C20CB000CAB685 /* DetalleGenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleGenericTableViewController.swift; sourceTree = "<group>"; };
+		B48F655D22C229DC00CAB685 /* WebSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSiteViewController.swift; sourceTree = "<group>"; };
 		EC82AE3D13B9E75B8C0E78E8 /* Pods-soEverProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soEverProject.release.xcconfig"; path = "Target Support Files/Pods-soEverProject/Pods-soEverProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 				B44029A022C0DDA800B3F6FB /* LibrosViewController.swift */,
 				B44029A222C0DDC400B3F6FB /* AplicacionesViewController.swift */,
 				B48F655B22C20CB000CAB685 /* DetalleGenericTableViewController.swift */,
+				B48F655D22C229DC00CAB685 /* WebSiteViewController.swift */,
 			);
 			path = VIEWS;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				B48F655C22C20CB000CAB685 /* DetalleGenericTableViewController.swift in Sources */,
 				B48F655A22C160B200CAB685 /* AppsModel.swift in Sources */,
 				B440299C22C0BB7A00B3F6FB /* GenericModels.swift in Sources */,
+				B48F655E22C229DC00CAB685 /* WebSiteViewController.swift in Sources */,
 				B48F655822C151D900CAB685 /* GenericPresenter.swift in Sources */,
 				B440299E22C0BD0000B3F6FB /* API_WebService.swift in Sources */,
 				B440299922C0B85A00B3F6FB /* API_UTILS.swift in Sources */,

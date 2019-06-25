@@ -28,13 +28,13 @@ class DetalleGenericTableViewController: UITableViewController {
     @IBOutlet weak var myEmailCustomLBL: UILabel!
     @IBOutlet weak var myMapCustomView: MKMapView!
     
-    
-    
-    
     //MARK: - IBActions
     
-    @IBAction func myWebSiteACTION(_ sender: Any) {
-        
+    @IBAction func myWebSiteACTION(_ sender: UIButton) {
+        let urlLoad = sender.titleLabel?.text
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "WebSiteViewController") as! WebSiteViewController
+        vc.url = urlLoad
+        self.present(vc, animated: true, completion: nil)
         
     }
     
@@ -64,6 +64,10 @@ class DetalleGenericTableViewController: UITableViewController {
         annotation.subtitle = modelDataDes.subtitle?.label
         myMapCustomView.addAnnotation(annotation)
         
+        myMobilePhoneCustomLBL.isUserInteractionEnabled = true
+        let gr = UITapGestureRecognizer(target: self, action: #selector(hacerLlamadaTelefonica))
+        myMobilePhoneCustomLBL.addGestureRecognizer(gr)
+        
     }
     
     
@@ -75,5 +79,14 @@ class DetalleGenericTableViewController: UITableViewController {
         return super.tableView(tableView, heightForRowAt: indexPath)
     }
 
+    
+    @objc func hacerLlamadaTelefonica(){
+        if let phoneCallURL = URL(string: "tel://\(myMobilePhoneCustomLBL.text!)") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
+    }
     
 }

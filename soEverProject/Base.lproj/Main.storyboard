@@ -348,6 +348,56 @@
             </objects>
             <point key="canvasLocation" x="2869.5999999999999" y="122.78860569715144"/>
         </scene>
+        <!--Web Site View Controller-->
+        <scene sceneID="ztB-y8-gZF">
+            <objects>
+                <viewController storyboardIdentifier="WebSiteViewController" id="NGN-m7-qFj" customClass="WebSiteViewController" customModule="soEverProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F7n-CX-TpQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-UG-2Pm">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoW-Ij-4aX">
+                                <rect key="frame" x="328" y="27" width="30" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="HBs-hB-sHg"/>
+                                    <constraint firstAttribute="width" constant="30" id="Zar-ZH-1sK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="myCloseCustomACTION:" destination="NGN-m7-qFj" eventType="touchUpInside" id="hd1-QF-DiU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x2w-UG-2Pm" firstAttribute="leading" secondItem="CbS-RQ-I9a" secondAttribute="leading" id="Clf-L4-Q0o"/>
+                            <constraint firstItem="CbS-RQ-I9a" firstAttribute="bottom" secondItem="x2w-UG-2Pm" secondAttribute="bottom" id="Lgt-ie-WIa"/>
+                            <constraint firstItem="CbS-RQ-I9a" firstAttribute="trailing" secondItem="qoW-Ij-4aX" secondAttribute="trailing" constant="17" id="Oga-fu-XrQ"/>
+                            <constraint firstItem="qoW-Ij-4aX" firstAttribute="top" secondItem="CbS-RQ-I9a" secondAttribute="top" constant="7" id="R8W-SJ-Cvr"/>
+                            <constraint firstItem="CbS-RQ-I9a" firstAttribute="trailing" secondItem="x2w-UG-2Pm" secondAttribute="trailing" id="lJQ-6t-KwE"/>
+                            <constraint firstItem="x2w-UG-2Pm" firstAttribute="top" secondItem="qoW-Ij-4aX" secondAttribute="bottom" constant="8" id="rec-wC-maS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CbS-RQ-I9a"/>
+                    </view>
+                    <connections>
+                        <outlet property="myWebCustomView" destination="x2w-UG-2Pm" id="cqs-F7-9k8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bw-fS-fgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3676" y="122.78860569715144"/>
+        </scene>
         <!--Apps-->
         <scene sceneID="GH0-bc-eAf">
             <objects>
