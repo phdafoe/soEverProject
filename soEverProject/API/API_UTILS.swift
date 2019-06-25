@@ -17,6 +17,7 @@ struct Constantes {
 struct LlamadasURL {
     
     let BASE_URL = "https://itunes.apple.com/%@/rss/%@/limit=%@/json"
+    let BASE_URL_NEW = "https://rss.itunes.apple.com/api/v1/%@/ios-apps/%@/all/%@/explicit.json"
     
 }
 

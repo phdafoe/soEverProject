@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import APESuperHUD
 
 class LibrosViewController: UIViewController {
     
@@ -59,7 +58,7 @@ extension LibrosViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let customCell = myTableCustomView.dequeueReusableCell(withIdentifier: "GenericCellIdentifier", for: indexPath) as! GenericCell
-        customCell.setUpGenericCell(arrayBooks[indexPath.row])
+        customCell.setUpGenericCell(arrayBooks[indexPath.row], modelResult: nil)
         return customCell
     }
     

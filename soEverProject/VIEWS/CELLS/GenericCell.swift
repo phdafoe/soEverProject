@@ -29,12 +29,21 @@ class GenericCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUpGenericCell(_ model : Entry){
-        myTitleLBL.text = model.title.label
-        myPriceLBL.text = model.imPrice.label
-        let pathImagenUrl = URL(string: model.imImage.last!.label)
-        myImageView.kf.setImage(with: pathImagenUrl)
-        myBackgroundImage.kf.setImage(with: pathImagenUrl)
+    func setUpGenericCell(_ modelEntry : Entry?, modelResult : Result?){
+        if let modelEntryDes = modelEntry{
+            myTitleLBL.text = modelEntryDes.title.label
+            myPriceLBL.text = modelEntryDes.imPrice.label
+            let pathImagenUrl = URL(string: modelEntryDes.imImage.last!.label)
+            myImageView.kf.setImage(with: pathImagenUrl)
+            myBackgroundImage.kf.setImage(with: pathImagenUrl)
+        }else if let modelResultDes = modelResult{
+            myTitleLBL.text = modelResultDes.artistName
+            myPriceLBL.text = modelResultDes.copyright
+            let pathImagenUrl = URL(string: (modelResultDes.artworkUrl100))
+            myImageView.kf.setImage(with: pathImagenUrl)
+            myBackgroundImage.kf.setImage(with: pathImagenUrl)
+        }
+        
        
     }
     

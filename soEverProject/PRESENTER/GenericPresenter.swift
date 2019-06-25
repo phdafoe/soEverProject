@@ -12,9 +12,7 @@ import APESuperHUD
 
 
 class GenericPresenter {
-    
-    static let genericDelegate = GenericPresenter()
-        
+            
     internal func getDataFromProvider(_ country: String, typeShow: String, numberData: String, completionHandler: @escaping ([Entry]?) -> ()) {
         APESuperHUD.show(style: .loadingIndicator(type: .standard), title: nil, message: "Loading...")
         WebServiceProvider().getModelDataFromWebItunes(GenericModel.self,
@@ -27,5 +25,20 @@ class GenericPresenter {
                                                             APESuperHUD.dismissAll(animated: true)
                                                         }
         }
+    }
+    
+    internal func getDataAppsFromProvider(_ country: String, typeShow: String, numberData: String, completionHandler: @escaping ([Result]?) -> ()){
+        APESuperHUD.show(style: .loadingIndicator(type: .standard), title: nil, message: "Loading...")
+        WebServiceProvider().getModelDataFromWebItunes(AppsModels.self,
+                                                       country: country,
+                                                       typeShow: typeShow,
+                                                       numberData: numberData) { (resultDataApps) in
+                                                        guard let resultDataAppsDes = resultDataApps else {return}
+                                                        DispatchQueue.main.async {
+                                                            completionHandler(resultDataAppsDes.feed.results)
+                                                            APESuperHUD.dismissAll(animated: true)
+                                                        }
+        }
+        
     }
 }

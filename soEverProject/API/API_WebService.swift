@@ -18,8 +18,14 @@ class WebServiceProvider {
                                                   typeShow : String,
                                                   numberData : String,
                                                   completionHandler : @escaping (T?) -> ()) {
+        var url = ""
+        if type == GenericModel.self{
+           url = CONSTANTES.LLAMADAS.BASE_URL
+        }else{
+           url = CONSTANTES.LLAMADAS.BASE_URL_NEW
+        }
        
-        let url = CONSTANTES.LLAMADAS.BASE_URL
+        
         let arguments : [CVarArg] = [country, typeShow, numberData]
         let urlString = String(format: url, arguments: arguments)
         

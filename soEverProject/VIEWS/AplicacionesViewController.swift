@@ -9,22 +9,65 @@
 import UIKit
 
 class AplicacionesViewController: UIViewController {
+    
+    //MARK: - Variables globales
+    var arrayApps = [Result]()
+    
+    //MARK: - IBOutlets
+    @IBOutlet weak var myTableCustomView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myTableCustomView.delegate = self
+        myTableCustomView.dataSource = self
+        myTableCustomView.register(UINib(nibName: "GenericCell", bundle: nil), forCellReuseIdentifier: "GenericCellIdentifier")
+        toDoCall()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        myTableCustomView.reloadData()
     }
-    */
+    
+    //MARK: - Metodos privados
+    internal func toDoCall(){
+        GenericPresenter().getDataAppsFromProvider("es", typeShow: "top-free", numberData: "10") { (resultApps) in
+            guard let resultAppsDes = resultApps else {return}
+            self.arrayApps = resultAppsDes
+            self.myTableCustomView.reloadData()
+        }
+    }
 
+}
+
+//MARK: - DELEGADO / DATA SOURCE
+extension AplicacionesViewController : UITableViewDelegate, UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayApps.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let customCell = myTableCustomView.dequeueReusableCell(withIdentifier: "GenericCellIdentifier", for: indexPath) as! GenericCell
+        customCell.setUpGenericCell(nil, modelResult: arrayApps[indexPath.row])
+        return customCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 233
+    }
+    
+    
 }

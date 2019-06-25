@@ -21,6 +21,7 @@
 		B44029A722C0F77600B3F6FB /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44029A522C0F77600B3F6FB /* GenericCell.swift */; };
 		B44029A822C0F77600B3F6FB /* GenericCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44029A622C0F77600B3F6FB /* GenericCell.xib */; };
 		B48F655822C151D900CAB685 /* GenericPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655722C151D900CAB685 /* GenericPresenter.swift */; };
+		B48F655A22C160B200CAB685 /* AppsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655922C160B200CAB685 /* AppsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		B44029A522C0F77600B3F6FB /* GenericCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCell.swift; sourceTree = "<group>"; };
 		B44029A622C0F77600B3F6FB /* GenericCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericCell.xib; sourceTree = "<group>"; };
 		B48F655722C151D900CAB685 /* GenericPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericPresenter.swift; sourceTree = "<group>"; };
+		B48F655922C160B200CAB685 /* AppsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsModel.swift; sourceTree = "<group>"; };
 		EC82AE3D13B9E75B8C0E78E8 /* Pods-soEverProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soEverProject.release.xcconfig"; path = "Target Support Files/Pods-soEverProject/Pods-soEverProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				B440299B22C0BB7A00B3F6FB /* GenericModels.swift */,
+				B48F655922C160B200CAB685 /* AppsModel.swift */,
 			);
 			path = MODELS;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				B440298822C0AFE300B3F6FB /* PeliculasViewController.swift in Sources */,
 				B44029A122C0DDA800B3F6FB /* LibrosViewController.swift in Sources */,
 				B440298622C0AFE300B3F6FB /* AppDelegate.swift in Sources */,
+				B48F655A22C160B200CAB685 /* AppsModel.swift in Sources */,
 				B440299C22C0BB7A00B3F6FB /* GenericModels.swift in Sources */,
 				B48F655822C151D900CAB685 /* GenericPresenter.swift in Sources */,
 				B440299E22C0BD0000B3F6FB /* API_WebService.swift in Sources */,

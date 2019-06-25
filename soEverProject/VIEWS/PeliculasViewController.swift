@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import APESuperHUD
 
 class PeliculasViewController: UIViewController {
     
@@ -63,7 +62,7 @@ extension PeliculasViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let customCell = myTableCustomView.dequeueReusableCell(withIdentifier: "GenericCellIdentifier", for: indexPath) as! GenericCell
-        customCell.setUpGenericCell(arrayPeliculas[indexPath.row])
+        customCell.setUpGenericCell(arrayPeliculas[indexPath.row], modelResult: nil)
         return customCell
     }
     
