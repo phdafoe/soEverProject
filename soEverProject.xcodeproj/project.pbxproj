@@ -24,6 +24,9 @@
 		B48F655A22C160B200CAB685 /* AppsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655922C160B200CAB685 /* AppsModel.swift */; };
 		B48F655C22C20CB000CAB685 /* DetalleGenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655B22C20CB000CAB685 /* DetalleGenericTableViewController.swift */; };
 		B48F655E22C229DC00CAB685 /* WebSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655D22C229DC00CAB685 /* WebSiteViewController.swift */; };
+		B48F656022C24B7100CAB685 /* AppsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F655F22C24B7100CAB685 /* AppsViewCell.swift */; };
+		B48F656322C253C600CAB685 /* GenericCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F656122C253C600CAB685 /* GenericCollectionCell.swift */; };
+		B48F656422C253C600CAB685 /* GenericCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48F656222C253C600CAB685 /* GenericCollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		B48F655922C160B200CAB685 /* AppsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsModel.swift; sourceTree = "<group>"; };
 		B48F655B22C20CB000CAB685 /* DetalleGenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleGenericTableViewController.swift; sourceTree = "<group>"; };
 		B48F655D22C229DC00CAB685 /* WebSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSiteViewController.swift; sourceTree = "<group>"; };
+		B48F655F22C24B7100CAB685 /* AppsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewCell.swift; sourceTree = "<group>"; };
+		B48F656122C253C600CAB685 /* GenericCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionCell.swift; sourceTree = "<group>"; };
+		B48F656222C253C600CAB685 /* GenericCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericCollectionCell.xib; sourceTree = "<group>"; };
 		EC82AE3D13B9E75B8C0E78E8 /* Pods-soEverProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soEverProject.release.xcconfig"; path = "Target Support Files/Pods-soEverProject/Pods-soEverProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +155,9 @@
 			children = (
 				B44029A522C0F77600B3F6FB /* GenericCell.swift */,
 				B44029A622C0F77600B3F6FB /* GenericCell.xib */,
+				B48F655F22C24B7100CAB685 /* AppsViewCell.swift */,
+				B48F656122C253C600CAB685 /* GenericCollectionCell.swift */,
+				B48F656222C253C600CAB685 /* GenericCollectionCell.xib */,
 			);
 			path = CELLS;
 			sourceTree = "<group>";
@@ -222,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B440299022C0AFE400B3F6FB /* LaunchScreen.storyboard in Resources */,
+				B48F656422C253C600CAB685 /* GenericCollectionCell.xib in Resources */,
 				B44029A822C0F77600B3F6FB /* GenericCell.xib in Resources */,
 				B440298D22C0AFE400B3F6FB /* Assets.xcassets in Resources */,
 				B440298B22C0AFE300B3F6FB /* Main.storyboard in Resources */,
@@ -278,10 +288,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B44029A322C0DDC400B3F6FB /* AplicacionesViewController.swift in Sources */,
+				B48F656322C253C600CAB685 /* GenericCollectionCell.swift in Sources */,
 				B44029A722C0F77600B3F6FB /* GenericCell.swift in Sources */,
 				B440298822C0AFE300B3F6FB /* PeliculasViewController.swift in Sources */,
 				B44029A122C0DDA800B3F6FB /* LibrosViewController.swift in Sources */,
 				B440298622C0AFE300B3F6FB /* AppDelegate.swift in Sources */,
+				B48F656022C24B7100CAB685 /* AppsViewCell.swift in Sources */,
 				B48F655C22C20CB000CAB685 /* DetalleGenericTableViewController.swift in Sources */,
 				B48F655A22C160B200CAB685 /* AppsModel.swift in Sources */,
 				B440299C22C0BB7A00B3F6FB /* GenericModels.swift in Sources */,

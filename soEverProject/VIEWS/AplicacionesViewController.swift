@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AplicacionesViewController: UIViewController {
     
@@ -14,60 +15,49 @@ class AplicacionesViewController: UIViewController {
     var arrayApps = [Result]()
     
     //MARK: - IBOutlets
-    @IBOutlet weak var myTableCustomView: UITableView!
+    @IBOutlet weak var myCollectionCustomView: UICollectionView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        myTableCustomView.delegate = self
-        myTableCustomView.dataSource = self
-        myTableCustomView.register(UINib(nibName: "GenericCell", bundle: nil), forCellReuseIdentifier: "GenericCellIdentifier")
+        myCollectionCustomView.delegate = self
+        myCollectionCustomView.dataSource = self
+        myCollectionCustomView.register(UINib(nibName: "GenericCollectionCell", bundle: nil), forCellWithReuseIdentifier: "GenericCollectionCellIdentifier")
         toDoCall()
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        myTableCustomView.reloadData()
+        myCollectionCustomView.reloadData()
     }
     
     //MARK: - Metodos privados
     internal func toDoCall(){
-        GenericPresenter().getDataAppsFromProvider("es", typeShow: "top-free", numberData: "10") { (resultApps) in
+        GenericPresenter().getDataAppsFromProvider("es", typeShow: "top-free", numberData: "99") { (resultApps) in
             guard let resultAppsDes = resultApps else {return}
             self.arrayApps = resultAppsDes
-            self.myTableCustomView.reloadData()
+            self.myCollectionCustomView.reloadData()
         }
     }
 
 }
 
-//MARK: - DELEGADO / DATA SOURCE
-extension AplicacionesViewController : UITableViewDelegate, UITableViewDataSource{
+//MARK: - DELEGADO / DATASOURCE -> CollectionView
+extension AplicacionesViewController : UICollectionViewDataSource, UICollectionViewDelegate{
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayApps.count
     }
     
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let customCell = myTableCustomView.dequeueReusableCell(withIdentifier: "GenericCellIdentifier", for: indexPath) as! GenericCell
-        customCell.setUpGenericCell(nil, modelResult: arrayApps[indexPath.row])
-        return customCell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 233
-    }
-    
-    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let collectionCell = myCollectionCustomView.dequeueReusableCell(withReuseIdentifier: "GenericCollectionCellIdentifier", for: indexPath) as! GenericCollectionCell
+        let model = arrayApps[indexPath.row]
+        collectionCell.myImageAppCellView.kf.setImage(with: URL(string: model.artworkUrl100)!)
+        return collectionCell
+    }  
 }

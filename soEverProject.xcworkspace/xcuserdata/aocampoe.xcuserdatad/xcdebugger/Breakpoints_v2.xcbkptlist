@@ -38,63 +38,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "soEverProject/VIEWS/AplicacionesViewController.swift"
-            timestampString = "583152889.8294539"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "toDoCall()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "soEverProject.AplicacionesViewController.toDoCall() -&gt; ()"
-                  moduleName = "soEverProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/AplicacionesViewController.swift"
-                  timestampString = "583152890.001845"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "29">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;soEverProject.Result&gt;&gt;) -&gt; () in soEverProject.AplicacionesViewController.toDoCall() -&gt; ()"
-                  moduleName = "soEverProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/AplicacionesViewController.swift"
-                  timestampString = "583152890.003971"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "45">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "soEverProject/VIEWS/DetalleGenericTableViewController.swift"
-            timestampString = "583152889.829524"
+            timestampString = "583161198.937319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "myWebSiteACTION(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,13 +58,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "soEverProject/VIEWS/DetalleGenericTableViewController.swift"
-            timestampString = "583152889.829895"
+            timestampString = "583161198.9374371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "hacerLlamadaTelefonica()"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+            timestampString = "583161198.93749"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "todoCallApps()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "soEverProject.DetalleGenericTableViewController.(todoCallApps in _3E63AC664A0B176C2E711F8397555FCA)() -&gt; ()"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583159553.224905"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;soEverProject.Result&gt;&gt;) -&gt; () in soEverProject.DetalleGenericTableViewController.(todoCallApps in _3E63AC664A0B176C2E711F8397555FCA)() -&gt; ()"
+                  moduleName = "soEverProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/APPS/soEverProject/soEverProject/VIEWS/DetalleGenericTableViewController.swift"
+                  timestampString = "583159553.226779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "45">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -17,6 +17,8 @@ class DetalleGenericTableViewController: UITableViewController {
     let latitud = 40.431128
     let longitud = -3.658840
     
+    var arrayApps = [Result]()
+    
     
     //MARK: - IBOutlets
     @IBOutlet weak var myImageCustomView: UIImageView!
@@ -27,6 +29,7 @@ class DetalleGenericTableViewController: UITableViewController {
     @IBOutlet weak var myMobilePhoneCustomLBL: UILabel!
     @IBOutlet weak var myEmailCustomLBL: UILabel!
     @IBOutlet weak var myMapCustomView: MKMapView!
+    @IBOutlet weak var myCollectionCustomView: UICollectionView!
     
     //MARK: - IBActions
     
@@ -40,6 +43,11 @@ class DetalleGenericTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myCollectionCustomView.delegate = self
+        myCollectionCustomView.dataSource = self
+        
+        todoCallApps()
         
         guard let modelDataDes =  modelData else {return}
         title = modelDataDes.title.label
@@ -88,5 +96,43 @@ class DetalleGenericTableViewController: UITableViewController {
             }
         }
     }
+    
+    private func todoCallApps(){
+        GenericPresenter().getDataAppsFromProvider("es", typeShow: "top-free", numberData: "10") { (resultApps) in
+            guard let resultAppsDes = resultApps else {return}
+            self.arrayApps = resultAppsDes
+            self.myCollectionCustomView.reloadData()
+        }
+    }
+    
+}
+
+//MARK: - DELEGADO / DATASOURCE -> CollectionView
+extension DetalleGenericTableViewController : UICollectionViewDataSource, UICollectionViewDelegate{
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayApps.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let collectionCell = myCollectionCustomView.dequeueReusableCell(withReuseIdentifier: "AppsViewCellReuseIdentifier", for: indexPath) as! AppsViewCell
+        let model = arrayApps[indexPath.row]
+        collectionCell.myImageAppCustomView.kf.setImage(with: URL(string: model.artworkUrl100)!)
+        
+        /*do{
+            let imageData = UIImage(data: try Data(contentsOf: URL(string: model.artworkUrl100)!))
+            collectionCell.myImageAppCustomView.image = imageData
+        }catch{
+            
+        }*/
+        return collectionCell
+    }
+    
+    
+    
     
 }

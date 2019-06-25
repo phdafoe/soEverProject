@@ -67,7 +67,10 @@ extension PeliculasViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetalleGenericTableViewController") as! DetalleGenericTableViewController
+        let model = arrayPeliculas[indexPath.row]
+        vc.modelData = model
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
